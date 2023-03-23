@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
         public string takeVideoId(string title, string singer) //유튜브 비디오 ID값 가져오는 함수
         {
             string urlCode = title + "-" + singer;
-            string selectSongUrl = "https://www.google.com/search?q=" + urlCode + " youtube";
+            string selectSongUrl = "https://www.google.com/search?q=" + urlCode + "&hl=ko&biw=813&bih=696&tbm=vid&sxsrf=";
             HtmlWeb web = new HtmlWeb();
             web.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36";
             HtmlAgilityPack.HtmlDocument doc = web.Load(selectSongUrl);
